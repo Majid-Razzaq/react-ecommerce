@@ -1,11 +1,14 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Logo from '../../assets/images/logo.png';
+import Logo from '../assets/images/logo.png';
+import LogoBlack from '../assets/images/logo-white.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import SliderOneImg from '../../assets/images/banner-1.jpg';
-import SliderTwoImg from '../../assets/images/banner-2.jpg';
+import SliderOneImg from '../assets/images/banner-1.jpg';
+import SliderTwoImg from '../assets/images/banner-2.jpg';
+import LatestProducts from './common/latestProducts';
+import FeaturedProducts from './common/FeaturedProducts';
 
 const Home = () => {
   return (
@@ -71,11 +74,49 @@ const Home = () => {
                 </Swiper>
         </section>
          
-         <section className="section-2">
+        <LatestProducts/>
+
+        {/* Featured products page */}
+
+       <FeaturedProducts/>
+
+       {/* Footer code start */}
+
+       <footer className='py-5 text-white'>
             <div className="container">
-                <h2>New Arrivals</h2>
+                <div className="row">
+                    <div className="col-md-3">
+                        <img src={LogoBlack} width={150} alt="" />
+                        <div className='pt-3'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia </div>
+                    </div>
+
+                    <div className="col-md-3">
+                        <h2>Categories</h2>
+                        <ul>
+                            <li><a href="">Kids</a> </li>
+                            <li><a href="">Womens</a> </li>
+                            <li><a href="">Mens</a> </li>
+                        </ul>
+                    </div>
+
+                    <div className="col-md-3">
+                    <h2>Quick Links</h2>
+                        <ul>
+                            <li><a href="">Login</a> </li>
+                            <li><a href="">Register</a> </li>
+                        </ul>
+                    </div>
+
+                    <div className="col-md-3">
+                    <h2>Get in touch</h2>
+                        <ul>
+                            <li><a href="">+91-24XXX-XXXX</a> </li>
+                            <li><a href="">info@example.com</a> </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-         </section>
+       </footer>
 
     </>
 

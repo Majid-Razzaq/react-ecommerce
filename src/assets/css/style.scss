@@ -98,6 +98,26 @@ header{
     }
 }
 
+footer{
+    background-color: $tertiary-color;
+    h2{
+        font-size: 1.5em;
+    }
+    ul{
+        padding-left: 0;
+        margin-left: 0;
+        li{
+            margin-bottom: 10px;
+            a{
+                font-size: 1.2em;
+                color: $primary-white;
+                text-decoration: none;
+                list-style-type: none;
+            }
+        }
+    }
+}
+
 .section-1{
     .swiper{
         .swiper-wrapper{
@@ -109,6 +129,35 @@ header{
                     background-repeat: no-repeat;
                     background-size: cover;
                  }
+            }
+        }
+    }
+}
+.product{
+    .card-img{
+        overflow: hidden;
+        border-radius: 10px;
+        img{
+            border-radius: 10px;
+            transition: all 0.3s ease-out;
+        }
+    }
+    &:hover{
+        img{
+            scale: 1.2;
+        }
+    }
+    .card-body{
+        padding: 0;
+        a{
+            font-size: 1.2em;
+            text-decoration: none;
+            color: $primary-black;
+        }
+        .price{
+            font-size: 1.2em;
+            span{
+                color: rgba($primary-black, $alpha: 0.5);
             }
         }
     }
